@@ -7,5 +7,5 @@ res.send("<h1>Server Running</h1>")
 );
 
 app.listen(port, () => {
-  console.log(` server listening on port ${port}`);
+  console.log(`E server listening on port ${port}`);
 });

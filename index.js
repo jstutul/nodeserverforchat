@@ -1,33 +1,14 @@
-// const express=require('express');
-// const app=express();
-// const http=require('http');
-// const server=http.createServer(app)
-// const {Server}=require('socket.io')
-// const io=new Server(server);
 
-// const cors = require('cors');
-// io.use(cors({
-//     origin: '8000'
-// }));
-
-// const io=require('socket.io')(8000,{
-//   origins: ["*"]
-// })
-
-// const io = require("socket.io")(process.env.PORT||8000, {
-//   cors: {
-//     origin: "*"
-//   }
-// });
 
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
 require("dotenv").config();
-const PORT = process.env.PORT || process.env.API_PORT;
 const app = express();
-app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
+
 const server = http.createServer(app);
 const users = {};
 const io = require("socket.io")(server, {

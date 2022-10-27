@@ -7,5 +7,5 @@ res.send("<h1>Server Running</h1>")
 );
 
 app.listen(port, () => {
-  console.log(`Express server listening on port ${port}`);
+  console.log(` server listening on port ${port}`);
 });
